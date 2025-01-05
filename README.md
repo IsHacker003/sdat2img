@@ -8,7 +8,7 @@ This binary requires Python 3.10 or newer installed on your system.
 It currently supports GNU/Linux, MacOS & ARM architectures.
 
 **Note:** newer Google's [Brotli](https://github.com/google/brotli) format (`system.new.dat.br`) must be decompressed to a valid sparse data image before using `sdat2img` binary.
-This is how to do it on Ubuntu:
+This is how to do it on Ubuntu (an example):
 ```
 ~$ sudo apt install brotli
 ~$ brotli --decompress system.new.dat.br -o system.new.dat
