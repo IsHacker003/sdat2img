@@ -5,10 +5,14 @@ Convert sparse Android data image (.dat) into filesystem ext4 image (.img)
 
 ## Requirements
 This binary requires Python 3.10 or newer installed on your system. 
-It currently supports Linux, MacOS & ARM architectures.
+It currently supports GNU/Linux, MacOS & ARM architectures.
 
 **Note:** newer Google's [Brotli](https://github.com/google/brotli) format (`system.new.dat.br`) must be decompressed to a valid sparse data image before using `sdat2img` binary.
-
+This is how to do it on Ubuntu:
+```
+~$ sudo apt install brotli
+~$ brotli --decompress system.new.dat.br -o system.new.dat
+```
 
 
 ## Usage
@@ -22,7 +26,7 @@ sdat2img.py <transfer_list> <system_new_file> [system_img]
 
 
 ## Example
-This is a simple example on a Linux system: 
+This is a simple example on a GNU/Linux system: 
 ```
 ~$ ./sdat2img.py system.transfer.list system.new.dat system.img
 ```
